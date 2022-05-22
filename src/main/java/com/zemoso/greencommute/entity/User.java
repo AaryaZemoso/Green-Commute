@@ -25,8 +25,8 @@ public class User {
     @ManyToMany
     @JoinTable(
             name = "user_saved_jobs",
-            joinColumns = { @JoinColumn(name = "user_id") },
-            inverseJoinColumns = { @JoinColumn(name = "job_id") }
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "job_id")}
     )
     @RestResource(rel = "savedJobs", path = "savedJobs")
     private Set<Job> savedJobs;

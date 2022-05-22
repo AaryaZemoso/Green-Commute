@@ -27,15 +27,15 @@ public class Job {
     @Column(name = "location")
     private String location;
 
-    @OneToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @OneToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinColumn(name = "company_id")
     private Company company;
 
     @ManyToMany
     @JoinTable(
             name = "job_skills",
-            joinColumns = { @JoinColumn(name = "job_id") },
-            inverseJoinColumns = { @JoinColumn(name = "skill_id") }
+            joinColumns = {@JoinColumn(name = "job_id")},
+            inverseJoinColumns = {@JoinColumn(name = "skill_id")}
     )
     private Set<Skill> skills;
 
