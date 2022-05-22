@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface JobService {
     Job getJobById(int id);
+
     List<Job> getAllJobs();
+
     List<Job> findByLocation(String location);
 
     List<Job> findBySkills(String[] skills);

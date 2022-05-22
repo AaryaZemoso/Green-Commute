@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class JobServiceImpl implements JobService{
+public class JobServiceImpl implements JobService {
 
     @Autowired
     JobRepository jobRepository;
@@ -34,7 +34,7 @@ public class JobServiceImpl implements JobService{
     }
 
     @Override
-    public List<Job> findByLocationAndSkills(String location, String[] skills){
+    public List<Job> findByLocationAndSkills(String location, String[] skills) {
         return jobRepository.findByLocationAndSkills(location, skills);
     }
 }
